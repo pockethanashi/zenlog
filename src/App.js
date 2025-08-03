@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
+import {
+  signInWithRedirect,
+  getRedirectResult,
+  onAuthStateChanged,
+  signOut,
+} from "firebase/auth";
 import { auth, provider } from "./firebase";
-import { signInWithPopup, onAuthStateChanged, signOut } from "firebase/auth";
 import PostForm from "./components/PostForm";
-import PostList from "./components/PostList"; // ← 投稿一覧コンポーネントのインポート
+import PostList from "./components/PostList";
 
 function App() {
   const [user, setUser] = useState(null);
 
   const login = () => {
-    signInWithPopup(auth, provider);
+    signInWithRedirect(auth, provider);
   };
 
   const logout = () => {
@@ -16,10 +21,23 @@ function App() {
   };
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (currentUser) => {
+    // Firebase auth state listener
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-    return () => unsub();
+
+    // After redirect, get user result
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result?.user) {
+          setUser(result.user);
+        }
+      })
+      .catch((error) => {
+        console.error("ログインエラー:", error);
+      });
+
+    return () => unsubscribe();
   }, []);
 
   return (
@@ -29,15 +47,21 @@ function App() {
         <>
           <div className="flex justify-between items-center mb-4">
             <p>こんにちは、{user.displayName} さん</p>
-            <button onClick={logout} className="bg-red-500 text-white px-3 py-1 rounded">
+            <button
+              onClick={logout}
+              className="bg-red-500 text-white px-3 py-1 rounded"
+            >
               ログアウト
             </button>
           </div>
           <PostForm user={user} />
-          <PostList /> {/* ← 投稿一覧の表示を追加 */}
+          <PostList />
         </>
       ) : (
-        <button onClick={login} className="bg-green-500 text-white px-4 py-2 rounded">
+        <button
+          onClick={login}
+          className="bg-green-500 text-white px-4 py-2 rounded"
+        >
           Googleでログイン
         </button>
       )}
