@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  signInWithRedirect,
-  getRedirectResult,
+  signInWithPopup,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
@@ -12,31 +11,26 @@ import PostList from "./components/PostList";
 function App() {
   const [user, setUser] = useState(null);
 
-  const login = () => {
-    signInWithRedirect(auth, provider);
+  // ログイン処理（ポップアップ方式）
+  const login = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      setUser(result.user);
+    } catch (error) {
+      console.error("ログイン失敗:", error);
+    }
   };
 
+  // ログアウト処理
   const logout = () => {
     signOut(auth);
   };
 
+  // 認証状態を監視
   useEffect(() => {
-    // Firebase auth state listener
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-
-    // After redirect, get user result
-    getRedirectResult(auth)
-      .then((result) => {
-        if (result?.user) {
-          setUser(result.user);
-        }
-      })
-      .catch((error) => {
-        console.error("ログインエラー:", error);
-      });
-
     return () => unsubscribe();
   }, []);
 
