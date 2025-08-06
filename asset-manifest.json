@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/zenlog/static/css/main.36b055b2.css",
-    "main.js": "/zenlog/static/js/main.b0ee4570.js",
+    "main.css": "/zenlog/static/css/main.4fdc3477.css",
+    "main.js": "/zenlog/static/js/main.5160707e.js",
     "static/js/453.ec683001.chunk.js": "/zenlog/static/js/453.ec683001.chunk.js",
     "index.html": "/zenlog/index.html",
-    "main.36b055b2.css.map": "/zenlog/static/css/main.36b055b2.css.map",
-    "main.b0ee4570.js.map": "/zenlog/static/js/main.b0ee4570.js.map",
+    "main.4fdc3477.css.map": "/zenlog/static/css/main.4fdc3477.css.map",
+    "main.5160707e.js.map": "/zenlog/static/js/main.5160707e.js.map",
     "453.ec683001.chunk.js.map": "/zenlog/static/js/453.ec683001.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36b055b2.css",
-    "static/js/main.b0ee4570.js"
+    "static/css/main.4fdc3477.css",
+    "static/js/main.5160707e.js"
   ]
 }
