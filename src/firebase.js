@@ -18,4 +18,7 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
+provider.setCustomParameters({ prompt: "select_account" });  // ✅ この行を追加
 export const db = getFirestore(app); // 今後 Firestore を使う場合
+
+export const adminUID = "1DkaD96Z55cL4MFdCDrUyPneu572"; // あなたのUID（ログイン後に確認可）

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zenlog｜みんなでいいことほめていこう～</title>
+  <meta name="description" content="Zenlog（ゼンログ）は、日常の“いいこと”を投稿・共有し、みんなで称え合うコミュニティアプリです。Googleで簡単ログイン、ニックネーム設定、いいねとポイント集計にも対応。" />
+  <meta property="og:title" content="Zenlog｜みんなでいいことほめていこう～" />
+  <meta property="og:description" content="日常の“いいこと”を投稿・共有し、みんなで称え合うコミュニティアプリ。Googleログイン＆ニックネーム設定対応。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pockethanashi.github.io/zenlog/about.html" />
+  <meta name="theme-color" content="#16a34a" />
+  
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* ちょいアクセント */
+    .badge { @apply inline-block rounded-full px-3 py-1 text-xs font-semibold bg-green-100 text-green-700; }
+    .card { @apply bg-white rounded-2xl shadow-sm border border-gray-100; }
+    .section { @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8; }
+    .lead { @apply text-lg text-gray-600; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- ===== Header ===== -->
+  <header class="bg-green-600 text-white">
+    <div class="section py-4 flex items-center justify-between">
+      <a href="/zenlog/" class="font-bold text-xl tracking-tight">Zenlog</a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm">
+        <a href="#features" class="hover:underline">特徴</a>
+        <a href="#how" class="hover:underline">使い方</a>
+        <a href="#points" class="hover:underline">ポイント</a>
+        <a href="#faq" class="hover:underline">FAQ</a>
+      </nav>
+      <a href="https://pockethanashi.github.io/zenlog/" class="ml-4 inline-flex items-center gap-2 rounded-full bg-white/10 hover:bg-white/20 px-4 py-2 text-sm font-medium">
+        アプリを開く
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M13.5 4.5a.75.75 0 0 0 0 1.5h4.19l-8.72 8.72a.75.75 0 1 0 1.06 1.06l8.72-8.72v4.19a.75.75 0 0 0 1.5 0v-6.5a.75.75 0 0 0-.75-.75h-6.5Z"/><path d="M6.75 5.25A2.25 2.25 0 0 0 4.5 7.5v11.25A2.25 2.25 0 0 0 6.75 21h11.25a2.25 2.25 0 0 0 2.25-2.25v-6a.75.75 0 0 0-1.5 0v6A.75.75 0 0 1 18 19.5H6a.75.75 0 0 1-.75-.75V7.5c0-.414.336-.75.75-.75h6a.75.75 0 0 0 0-1.5h-6Z"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="section pt-12 pb-10">
+    <div class="grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <span class="badge">みんなで、称え合う社会へ</span>
+        <h1 class="mt-3 text-3xl sm:text-4xl font-extrabold leading-tight">
+          みんなでいいことほめていこう～
+        </h1>
+        <p class="lead mt-4">
+          Zenlog（ゼンログ）は、日常で見つけた“善い行い”を投稿・共有できるアプリです。<br class="hidden sm:block"/>
+          ニックネームで参加OK。いいねがポイントになって、やさしさが見える化されます。
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="https://pockethanashi.github.io/zenlog/" class="inline-flex items-center justify-center rounded-full bg-green-600 hover:bg-green-700 text-white px-5 py-3 font-medium shadow-sm">今すぐはじめる</a>
+          <a href="#how" class="inline-flex items-center justify-center rounded-full bg-white text-green-700 border border-green-600 px-5 py-3 font-medium">使い方を見る</a>
+        </div>
+        <p class="text-xs text-gray-500 mt-3">* Googleで簡単ログイン。ニックネームの設定も可能です。</p>
+      </div>
+      <div class="card p-6">
+        <!-- 画像の代わりのモック（スクリーンショットの差し替え想定） -->
+        <div class="aspect-[16/10] w-full rounded-xl bg-gradient-to-br from-green-50 to-emerald-100 border border-emerald-200 grid place-items-center text-emerald-700">
+          <div class="text-center">
+            <div class="text-sm">スクリーンショットをここに</div>
+            <div class="text-xs text-emerald-600">（/zenlog のUI画像に差し替えてください）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section id="features" class="section py-12">
+    <h2 class="text-2xl font-bold mb-6">Zenlogの特徴</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-5">
+        <div class="text-green-700 font-semibold">かんたん投稿</div>
+        <p class="mt-2 text-sm text-gray-600">思いついたらすぐ投稿。改行もOK、シンプルな入力欄でさっと共有できます。</p>
+      </div>
+      <div class="card p-5">
+        <div class="text-green-700 font-semibold">ニックネームで安心</div>
+        <p class="mt-2 text-sm text-gray-600">Googleでログイン後、アプリ内で表示名（ユーザー名）を自由に設定できます。</p>
+      </div>
+      <div class="card p-5">
+        <div class="text-green-700 font-semibold">いいねがポイントに</div>
+        <p class="mt-2 text-sm text-gray-600">もらった「いいね」や自分が押した数、投稿数からポイントを計算。活動の見える化に。</p>
+      </div>
+      <div class="card p-5">
+        <div class="text-green-700 font-semibold">コメントで称賛の輪</div>
+        <p class="mt-2 text-sm text-gray-600">投稿にコメントして、良い行いをみんなで称え合いましょう。</p>
+      </div>
+      <div class="card p-5">
+        <div class="text-green-700 font-semibold">シンプル＆軽量</div>
+        <p class="mt-2 text-sm text-gray-600">最小限の機能でサクサク動作。どなたでも迷わず使えます。</p>
+      </div>
+      <div class="card p-5">
+        <div class="text-green-700 font-semibold">オープンな運営方針</div>
+        <p class="mt-2 text-sm text-gray-600">機能改善の要望を歓迎。透明性の高いアップデートを心がけます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How it works ===== -->
+  <section id="how" class="section py-12">
+    <h2 class="text-2xl font-bold mb-6">使い方</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-6">
+        <div class="text-sm text-gray-500">Step 1</div>
+        <div class="mt-1 font-semibold">Googleでログイン</div>
+        <p class="mt-2 text-sm text-gray-600">複数アカウントをお持ちでも、毎回選択画面が表示されます。</p>
+      </div>
+      <div class="card p-6">
+        <div class="text-sm text-gray-500">Step 2</div>
+        <div class="mt-1 font-semibold">ユーザー名を設定</div>
+        <p class="mt-2 text-sm text-gray-600">アプリ内の表示名を自由に決められます。後から変更も可能。</p>
+      </div>
+      <div class="card p-6">
+        <div class="text-sm text-gray-500">Step 3</div>
+        <div class="mt-1 font-semibold">投稿・いいね・コメント</div>
+        <p class="mt-2 text-sm text-gray-600">日常の“いいこと”を残して、みんなで称え合いましょう。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Points ===== -->
+  <section id="points" class="section py-12">
+    <h2 class="text-2xl font-bold mb-6">ポイントの仕組み</h2>
+    <div class="grid lg:grid-cols-2 gap-6 items-start">
+      <div class="card p-6">
+        <p class="text-sm text-gray-600 leading-relaxed">
+          ポイントは「投稿数」「もらったいいね」「押したいいね」の合計で算出されます。<br />
+          重み（係数）は運営で調整可能で、よりバランスの良い評価を目指します。
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside">
+          <li>投稿数：<span class="text-gray-500">postCount</span></li>
+          <li>もらったいいね：<span class="text-gray-500">receivedLikes</span></li>
+          <li>押したいいね：<span class="text-gray-500">likeGiven</span></li>
+        </ul>
+        <p class="mt-3 text-xs text-gray-500">※係数 a, b, c はアプリ内の設定により変更される場合があります。</p>
+      </div>
+      <div class="card p-6">
+        <div class="aspect-[16/9] w-full rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 border grid place-items-center">
+          <div class="text-center text-gray-500 text-sm">
+            ここにポイント表示UIのスクリーンショットを掲載できます
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section py-12">
+    <h2 class="text-2xl font-bold mb-6">よくある質問</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-6">
+        <div class="font-semibold">Q. 本名で表示されますか？</div>
+        <p class="mt-2 text-sm text-gray-600">A. ログイン後にニックネーム（表示名）を設定でき、投稿やコメント、いいねに反映されます。</p>
+      </div>
+      <div class="card p-6">
+        <div class="font-semibold">Q. 何が記録されますか？</div>
+        <p class="mt-2 text-sm text-gray-600">A. 投稿内容、いいね数、コメント、ユーザー名など。運営改善のため統計情報を参照する場合があります。</p>
+      </div>
+      <div class="card p-6">
+        <div class="font-semibold">Q. 不適切な投稿はどうなりますか？</div>
+        <p class="mt-2 text-sm text-gray-600">A. 管理者が削除できる仕組みがあります。安心・安全な場づくりにご協力ください。</p>
+      </div>
+      <div class="card p-6">
+        <div class="font-semibold">Q. スマホでも使えますか？</div>
+        <p class="mt-2 text-sm text-gray-600">A. はい。スマートフォンでも快適に使えるレイアウトです。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Privacy / Policy (簡易) ===== -->
+  <section class="section py-12">
+    <h2 class="text-2xl font-bold mb-6">プライバシーと運用</h2>
+    <div class="card p-6">
+      <ul class="list-disc list-inside text-sm text-gray-700 space-y-2">
+        <li>ログインは Google アカウントを使用します。</li>
+        <li>表示名はアプリ内で任意に設定可能です。</li>
+        <li>データは Firebase（Firestore）に保存されます。</li>
+        <li>詳細なプライバシーポリシー・利用規約は今後掲載予定です。</li>
+      </ul>
+      <div class="mt-4 text-sm">
+        お問い合わせ：<a class="text-green-700 underline" href="https://pockethanashi.github.io/zenlog/">アプリ内リンク</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA / Footer ===== -->
+  <section class="section py-12">
+    <div class="card p-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="text-xl font-semibold">さっそく、やさしさを記録してみませんか？</div>
+        <p class="text-sm text-gray-600 mt-1">あなたの一歩が、周りのだれかの勇気になります。</p>
+      </div>
+      <a href="https://pockethanashi.github.io/zenlog/" class="inline-flex items-center justify-center rounded-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 font-medium shadow">
+        Zenlogを開く
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-white border-t">
+    <div class="section py-6 text-sm text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>© <span id="y"></span> Zenlog</div>
+      <div class="flex items-center gap-4">
+        <a href="#features" class="hover:underline">特徴</a>
+        <a href="#how" class="hover:underline">使い方</a>
+        <a href="#faq" class="hover:underline">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 年号を自動更新
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
